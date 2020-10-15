@@ -34,7 +34,6 @@ async def youdrive():
 
         url_api = f'https://www.direct-assurance.fr/Sales/{key_path}/YouDriveDashboard/LastLocation/{args.car_id}'
 
-        print(url_api)
         async with session.post(url_api) as response:
             html = await response.text()
             print(html)
